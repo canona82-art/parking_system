@@ -67,17 +67,25 @@
   ```text
   iot-repo-1/
   ├── AI/
-  │   ├── ai_server.py       # AI 통신 클라이언트
-  │   ├── ocr_adapter.py     # YOLO + EasyOCR 파이프라인
-  │   ├── network_basic.py   # 공통 바이너리 프로토콜
-  │   └── best.pt            # 학습된 YOLO 가중치
+  │   ├── ai_server.py          # 메인 서버와 연결되는 AI 통신 클라이언트
+  │   ├── ocr_adapter.py        # YOLO + EasyOCR 번호판 인식 파이프라인
+  │   ├── network_basic.py      # AI 측 공통 바이너리 통신 프로토콜
+  │   └── best.pt               # 학습된 YOLO 모델 가중치
+  │
   ├── ESP32/
-  │   ├── TCP_RFID.ino       # ESP32 메인 펌웨어
-  │   ├── smart_parking.cpp  # 센서 및 통신 구현
-  │   └── parking.h          # 상수와 함수 선언
-  ├── camera_sender.py       # 입·출차 카메라 UDP 송신기
-  ├── mainServer.py          # 통합 서버 및 관리자 GUI
-  └── README.md
+  │   ├── TCP_RFID.ino          # ESP32 메인 펌웨어
+  │   ├── smart_parking.cpp     # 주차 센서 및 서버 통신 구현
+  │   └── parking.h             # 상수와 함수 선언
+  │
+  ├── mainServer/
+  │   ├── mainServer.py         # 통합 서버 실행 및 PyQt 관리자 GUI
+  │   ├── AI_network.py         # AI 서버 TCP 연결과 OCR 요청·응답 처리
+  │   ├── Camera_network.py     # ESP32-CAM UDP 영상 수신 및 프레임 재조립
+  │   ├── ESP32_network.py      # ESP32 TCP 연결과 입·출차 이벤트 처리
+  │   └── network_basic.py      # 메인 서버 측 공통 바이너리 통신 프로토콜
+  │
+  ├── camera_sender.py          # 입·출차 카메라 UDP 영상 송신기
+  └── README.md                 # 프로젝트 설명 및 실행 방법
   ```
 
 
