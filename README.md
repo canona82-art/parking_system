@@ -1,8 +1,8 @@
-# 주차 야호~
+# 주차 야호!
 ### 1. Smart Parking Management System
 > 차량, 번호판 인식과 ESP32 센서 및 FRID를 활용해 입출차, 요금 정산, 주차 관리를 자동화한 스마트 주차 시스템
 
-<img width="4000" height="2776" alt="SP" src="https://github.com/user-attachments/assets/8de31d9c-90a5-4333-aa51-a93ca61c86d0" />
+<img width="905" height="551" alt="image" src="https://github.com/user-attachments/assets/223ce4e2-9a6f-4a75-8a9d-88e603e868e7" />
 
 
 ### 2. 프로젝트 개요
